@@ -19,14 +19,17 @@
         <div class="geminiBtn"><a href="">Gemini</a></div>
       </div>
     </nav>
+    
     <div class="main-container">
       <div class="searchBar-container">
-        <input type="search" placeholder="search">
+        <form class="searchBox">
+          <button class="searchGoogleBtn">Search with Google</button>
+          <input type="search" id="search-query" placeholder="search" />
+          <button class="searchWikiBtn">Search with Wiki</button>
+        </form>
       </div>
-      <div class="feed-container">
-        <div class="google-feed"></div>
-        <div class="wiki-feed"></div>
-      </div>
+      <div class="feed-container"></div>
     </div>
+    <script src="./assets/js/index.js"></script>
   </body>
 </html>
