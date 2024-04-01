@@ -31,13 +31,42 @@ body {
 
 .news-feed a {
   text-decoration: none;
-  font-size: 18px;
   color: black;
-  border: 1px solid black;
-  padding: 5px 10px;
-  font-weight: bold;
-  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
 }
+
+.uniBtn {
+  font-weight: bold;
+  height: 40px;
+  padding: 6px 10px;
+  outline: none;
+  border: 1px solid black;
+  background-color: transparent;
+  border-radius: 5px;
+  position: relative;
+  margin-left: 10px;
+}
+
+.uniBtn:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 7px;
+  left: 7px;
+  height: 100%;
+  background-color: rgb(201, 184, 246);
+  z-index: -1;
+  transition: all 0.35s;
+  border-radius: inherit;
+}
+
+.uniBtn:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+
 
 .nav-title {
   font-size: 32px;

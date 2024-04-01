@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News</title>
+    <link rel="stylesheet" href="./assets/css/news.css" />
+  </head>
+  <body>
+    <div class="title"><h1>News on my Screen</h1></div>
+    <div class="container">
+      <div class="selectionContainer">
+        <label for="category">Choose Category :</label>
+        <select id="category">
+          <option value="technology">Technology</option>
+          <option value="business">Business</option>
+          <option value="entertainment">Entertainment</option>
+          <option value="general">General</option>
+          <option value="health">Health</option>
+          <option value="science">Science</option>
+          <option value="sports">Sports</option>
+        </select>
+        <button class="uniBtn" id="fetchCategory">Get News</button>
+      </div>
+
+      <div class="searchContainer">
+        <input
+          class="uniSer"
+          type="text"
+          id="searchKeyword"
+          placeholder="Search for news..."
+        />
+        <button class="uniBtn" onclick="fetchNews(true)">Search</button>
+      </div>
+    </div>
+    <div id="newsContainer"></div>
+    <script src="./assets/js/news.js"></script>
+  </body>
+</html>
