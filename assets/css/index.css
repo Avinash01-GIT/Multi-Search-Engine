@@ -7,7 +7,9 @@
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
+  background-color: #8bf0be;
+  background: linear-gradient(to right, #e2e2e2, #8bf0be);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,15 +17,12 @@ body {
 }
 
 .nav-container {
+  /* border: 1px solid black; */
   height: 60px;
-  /* background-color: #777; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  /* position: fixed;
-  top: 0;
-  z-index: 2; */
 }
 
 .news-feed a {
@@ -63,8 +62,6 @@ body {
   left: 0px;
 }
 
-
-
 .nav-title {
   font-size: 32px;
   font-weight: bolder;
@@ -88,29 +85,122 @@ body {
   border-radius: 5px;
 }
 
-.main-container {
+.search-container {
+  margin-bottom: 1rem;
+  /* border: 1px solid blue; */
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.gif-container img{
+  width: 130px;
+  height: 130px;
+}
+
+.searchBar-wrap {
+  /* border: 1px solid orange; */
+  width: 500px;
+  position: relative;
+  display: flex;
+}
+
+.search-input{
   width: 100%;
-  height: 100vh;
   padding: 10px;
+  border: 4px solid #111d5e;
+  border-radius:5px 0 0 5px ;
+  border-right: none;
+  outline: none;
+  font-size: 20px;
+  color: tomato;
+  background: none;
+}
+
+.search-button {
+  text-align: center;
+  height: 51px;
+  width: 40px;
+  outline: none;
+  cursor: pointer;
+  border: 4px solid #111d5e;
+   border-radius: 0 10px 10px 0 ;
+  border-left: none;
+  background: none;
+  font-size: 18px;
+  border-left: 4px solid #111d5e;
+}
+
+
+.resultsContainer {
+  margin: 0 auto;
+  /* border: 1px solid black; */
+  width: 90%;
+  display: flex;
+  gap: 5px;
+}
+
+.googleResult {
+  /* border: 1px solid black; */
+  width: 50%;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 18px;
+}
+
+.gresult {
+  width: 80%;
+  padding: 20px;
+  line-height: 20px;
+  /* margin-bottom: 15px; */
+  text-align: left;
+  border-radius: 5px;
+  color: white;
+}
+
+.gresult a {
+  font-weight: bold;
+  color: black;
+}
+
+ .wikiResult {
+  width: 50%;
   display: flex;
   flex-direction: column;
-}
-
-.searchBar-container {
-  /* border: 1px solid black; */
-  height: 60px;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 1rem;
+  flex-wrap: wrap;
+  /* border: 1px solid orange; */
 }
 
-.feed-container {
+.wikipediaResult {
   border: 1px solid black;
-  width: 100%;
-  /* height: 100vh; */
-  display: flex;
-  gap: .5rem;
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.wikipediaResult a {
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.wikipediaResult a:hover {
+  text-decoration: underline;
+}
+
+.wikipediaResult h3 {
+  font-weight: 500;
+}
+
+.wikipediaResult p {
+  font-size: 18px;
+  color: #333;
 }
 
 

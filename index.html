@@ -19,16 +19,28 @@
         <div class="geminiBtn"><a href="">Gemini</a></div>
       </div>
     </nav>
-    
-    <div class="main-container">
-      <div class="searchBar-container">
-        <form class="searchBox">
-          <button class="searchGoogleBtn">Search with Google</button>
-          <input type="search" id="search-query" placeholder="search" />
-          <button class="searchWikiBtn">Search with Wiki</button>
-        </form>
+    <div class="search-container">
+      <div class="gif-container">
+        <img src="./assets/images/gogo.gif" alt="" />
       </div>
-      <div class="feed-container"></div>
+      <div class="searchBar-wrap">
+        <input
+          class="search-input"
+          type="search"
+          id="searchInput"
+          placeholder="Enter your search query"
+        />
+        <button class="search-button" onclick="search()">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+      <div class="gif-container">
+        <img src="./assets/images/giphy.gif" alt="" />
+      </div>
+    </div>
+    <div class="resultsContainer">
+      <div class="googleResult" id="searchResults"></div>
+      <div class="wikiResult" id="wikipediaResults"></div>
     </div>
     <script src="./assets/js/index.js"></script>
   </body>
