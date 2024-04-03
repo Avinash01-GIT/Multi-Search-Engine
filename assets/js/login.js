@@ -50,7 +50,7 @@ document.querySelector('.form-container.sign-in form').addEventListener('submit'
       localStorage.setItem('currentUser', JSON.stringify(user));
 
       // Redirect user to main page after login
-      window.location.href = '/index.html';
+      window.location.href = '/multi.html';
   } else {
       alert('Invalid email or password');
   }
