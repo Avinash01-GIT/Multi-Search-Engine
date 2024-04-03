@@ -28,9 +28,9 @@ async function fetchNews(isSearching) {
     if (currentPage === 1) {
       newsContainer.innerHTML = "";
     }
-    const articlesWithImage = data.articles.filter(
+    const articlesWithImage = data.articles ? data.articles.filter(
       (article) => article.urlToImage
-    );
+    ) : [];
     if (
       articlesWithImage.length === 0 ||
       articlesWithImage.length === lastArticleCount
@@ -74,9 +74,7 @@ async function fetchNews(isSearching) {
 
 function displayNoMoreNews() {
   const newsContainer = document.getElementById("newsContainer");
-  if (articlesWithImage.length === 0) {
-    newsContainer.innerHTML += "<p>No more news to load.</p>";
-  }
+  newsContainer.innerHTML += "<p>No more news to load.</p>";
 }
 
 window.onscroll = function () {
@@ -100,3 +98,4 @@ document.getElementById("fetchCategory").addEventListener("click", function () {
   currentKeyword = null;
   fetchNews(false);
 });
+
