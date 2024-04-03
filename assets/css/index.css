@@ -365,5 +365,55 @@ header h2 {
   visibility: visible;
 }
 
+@media only screen and (max-width: 425px){
+  .news-feed a{
+    font-size: 16px;
+  }
+
+  .uniBtn {
+    height: 35px;
+    padding: 3.5px 5.5px;
+  }
+  .nav-title {
+    font-size: 20px;
+  }
+
+  .geminiBtn a {
+    font-size: 16px;
+    padding: 4px 5px;
+  }
+
+  .gif-container img{
+    width: 70px;
+    height: 70px;
+  }
+
+  .search-input{
+    width: 80%;
+    padding: 5px;
+    font-size: 16px;
+  }
+  .search-button{
+    width: 35px;
+  }
+
+  .resultsContainer{
+    /* border: 1px solid black; */
+    width: 100%;
+  }
+
+  .gresult{
+    width: 90%;
+  }
+
+  .wikipediaResult{
+    width: 90%;
+  }
+
+  .chatbot {
+    width: 320px;
+  }
+}
+
 
 
