@@ -11,27 +11,29 @@ async function search() {
 
 async function searchGoogle(query) {
   try {
-    const apiKey = 'AIzaSyCDHeeL9vrctoNnD_3SVV_bqXHvo60ysy0';
-    const cx = 'c10187e22a55b452b';
+    const apiKey = "AIzaSyCDHeeL9vrctoNnD_3SVV_bqXHvo60ysy0";
+    const cx = "c10187e22a55b452b";
     const url = `https://www.googleapis.com/customsearch/v1?q=${query}&key=${apiKey}&cx=${cx}`;
 
     const response = await fetch(url);
     const data = await response.json();
     displayGoogleResults(data.items);
   } catch (error) {
-    console.error('Error fetching Google search results:', error);
+    console.error("Error fetching Google search results:", error);
   }
 }
 
 async function searchWikipedia(query) {
   try {
-    const url = `https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=10&srsearch=${encodeURIComponent(query)}`;
+    const url = `https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=10&srsearch=${encodeURIComponent(
+      query
+    )}`;
 
     const response = await fetch(url);
     const data = await response.json();
     displayWikipediaResults(data.query.search);
   } catch (error) {
-    console.error('Error fetching Wikipedia search results:', error);
+    console.error("Error fetching Wikipedia search results:", error);
   }
 }
 
@@ -44,12 +46,12 @@ function displayGoogleResults(items) {
     return;
   }
 
-  const colors = ['#4285F4', '#34A853', '#FBBC05', '#EA4335'];
+  const colors = ["#4285F4", "#34A853", "#FBBC05", "#EA4335"];
 
   // Shuffle the array
   shuffleArray(colors);
 
-  items.forEach(function(item, index) {
+  items.forEach(function (item, index) {
     const title = item.title;
     const link = item.link;
     const snippet = item.snippet;
@@ -96,6 +98,3 @@ function shuffleArray(array) {
     [array[i], array[j]] = [array[j], array[i]];
   }
 }
-
-
-
