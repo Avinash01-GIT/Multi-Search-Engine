@@ -74,7 +74,7 @@ async function fetchNews(isSearching) {
 
 function displayNoMoreNews() {
   const newsContainer = document.getElementById("newsContainer");
-  newsContainer.innerHTML += "<p>No more news to load.</p>";
+  newsContainer.innerHTML += "<p>No more news to load.(This news loads on local hosting clone this project)</p>";
 }
 
 window.onscroll = function () {
