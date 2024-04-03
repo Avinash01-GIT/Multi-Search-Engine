@@ -28,8 +28,10 @@ body {
   justify-content: center;
 }
 
-.nav-container h1 {
+.nav-container h1 a{
   text-align: center;
+  text-decoration: none;
+  color: black;
 }
 
 .scroll {
