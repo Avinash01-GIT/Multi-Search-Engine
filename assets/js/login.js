@@ -64,7 +64,7 @@ document
       localStorage.setItem("currentUser", JSON.stringify(user));
 
       // Redirect user to main page after login
-      window.location.href = "/multi.html";
+      window.location.href = "./multi.html";
     } else {
       alert("Invalid email or password");
     }
